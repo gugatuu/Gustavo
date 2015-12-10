@@ -1,0 +1,11 @@
+/*isso é um comentário css */
+/*sintaxe do css
+
+seletor{propriedade:valor;}
+
+Selector -> pode ser uma Tag, classe ou ID
+Propriedade -> Atributo de html, exemplo font, color, background
+Valor - green, fundo preto
+
+*/
+
