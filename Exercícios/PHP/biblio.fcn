@@ -1,0 +1,61 @@
+<?php
+  function data()
+  {    
+	$dia_da_semana = array("Domingo", "Segunda", "Terca", "Quarta", "Quinta", "Sexta", 
+                           "Sabado");
+    
+    $dia = date("d"); //01-31
+    $mes = date("m"); //01-12
+	$ano = date("Y");	//YYYY
+	$dia_sem = date("w"); //0-6
+	
+	$mes_extenso_array = array("janeiro", "feVereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro");
+	$mes_extenso_final = $mes_extenso_array[$mes -1];
+	
+	switch ($mes)
+	{
+	 case 01:
+	   $mes_extenso = "Janeiro";
+	   break;
+	 case 02:
+	   $mes_extenso = "Fevereiro";
+	   break;
+	 case 03:
+	   $mes_extenso = "Marco";
+	   break;
+	 case 04:
+	   $mes_extenso = "Abril";
+	   break;
+	 case 05:
+	   $mes_extenso = "Maio";
+	   break;
+	 case 06:
+	   $mes_extenso = "Junho";
+	   break;
+	 case 07:
+	   $mes_extenso = "Julho";
+	   break;
+	 case 08:
+	   $mes_extenso = "Agosto";
+	   break;
+	 case 09:
+	   $mes_extenso = "Setembro";
+	   break;
+	 case 10:
+	   $mes_extenso = "Outubro";
+	   break;
+	 case 11:
+	   $mes_extenso = "Novembro";
+	   break;
+	 case 12:
+	   $mes_extenso = "Dezembro";
+	   break;	   
+	}
+	
+	//$data_final = $dia_da_semana[$dia_sem]. ", $dia de ".$mes_extenso. " de $ano"; 
+	
+	$data_final = $dia_da_semana[$dia_sem]. ", $dia de ".$mes_extenso_final. " de $ano"; 	
+	
+	return $data_final;
+  }
+?>
