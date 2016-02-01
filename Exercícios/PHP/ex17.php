@@ -1,57 +1,13 @@
 <HTML>
-<HEAD> <TITLE> Exercício 16 </TITLE>  
+<HEAD> <TITLE> Exercício 17 </TITLE>  
 <?php include ("biblio.fcn"); ?>
-<script language = "javascript">
-	function validadados(formulario)
-	{
-		if (formulario.nome.value == "")
-		{
-			alert("o campo nome é obrigatorio");
-			return false;
-		}
-		
-		if (formulario.nome.value.indexOf('@',0) == -1)
-		{
-			alert("email inválido");
-			formulario.nome.value = "eta nois";
-			formulario.nome.size = 5;			
-			return false;
-		}		
-		
-		if (formulario.endereco.value == "")
-		{
-			alert("o campo endereco é obrigatorio");
-			return false;
-		}		
-		
-		if (!formulario.sexo[0].checked && !formulario.sexo[1].checked)
-		{
-			alert("o campo sexo é obrigatorio");
-			return false;
-		}		
-		
-		if (formulario.estado.value=="UF")
-		{
-			alert("o campo estado é obrigatorio");
-			return false;
-		}				
-		
-		if ((!formulario.opt1.checked) && (!formulario.opt2.checked) && (!formulario.opt3.checked) &&
-		    (!formulario.opt4.checked) && (!formulario.opt5.checked))
-		{
-			alert("marque pelo menos uma opcao");
-			return false;
-		}						
-		
-		return true;
-	}
-</script>
+
 </HEAD>
 <BODY>
 <h2 align = "center"> www.mjailton.com.br  </h2>
 <?= data() ?>
 
-<FORM action = "Prog11.php" method = "post" onSubmit = "return validadados(this)">
+<FORM action = "Prog14.php" method = "post">
 Nome: <input type = "text" name = "nome" size = "30" maxlength = "30"> <br>
 Endereco: <input type = "text" name = "endereco" size = "40" maxlength = "40"> <br>
 Estado:
