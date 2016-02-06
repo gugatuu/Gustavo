@@ -1,0 +1,99 @@
+/* Redefinio de TAGS *********************************************************/
+input[type="submit"]:hover { 
+	background:#CCCC66; } /*So para Mozilla e Opera*/
+	
+body, 
+form, 
+table, 
+td, 
+div,
+hr {
+	margin: 0px;
+	padding: 0px;}
+	
+body {background-color:#FFFFFF;}	
+	
+td {vertical-align:top;}
+
+hr { 
+	border-top-width: 1px;
+	border-top-style: dashed;
+	border-top-color: #999999;
+	height: 1px;}
+	
+	
+/* Links ********************************************************/
+#cab a, 
+#rodape #nav_aux a {color:#FFFFFF;}
+
+#cab a:hover,
+#rodape #nav_aux a:hover {color:#ffad1d;}
+
+a#todos {	font-weight: bold;}
+
+a {color:#ff5c41;}
+a:hover {
+	color: #e0800e;
+	text-decoration:none;}
+a:visited {color:#3960a2}
+
+a.a_head {color:#000000; text-decoration:none;}
+a.a_head:visited {color:#000000; text-decoration:none;}
+a.a_head:hover {color:#000000; text-decoration:underline}
+#migalhas_de_pao a:link {color:#002288;}
+#migalhas_de_pao a:visited {color:#002288;}
+
+#cor a:link {color:black;}
+#cor a:visited {color:black;}
+
+#corazul a:link {color:#0000FF;}
+#corazul a:visited {color:#0000FF;}
+
+#corverm a:link {color:#FF0000;}
+#corverm a:visited {color:#FF0000;}
+
+a.cor2:link{color:#000000;}
+a.cor2:visited{color:#000000;}
+
+a.cor3:link{color:#009900;text-decoration:none;}
+a.cor3:visited{color:#006600;text-decoration:none;}
+
+a.red:link{color:#FF3333;}
+a.red:visited{color:#FF3333;}
+
+
+a.azul:link{color:#006699}
+a.azul:visited{color:#006699}
+
+a.branco:link{color:#FFFFFF}
+a.branco:visited{color:#FFFFFF}
+
+a.azul2:link{color:#0099CC;text-decoration:none;}
+a.azul2:visited{color:#0099CC;text-decoration:none;}
+
+span.linkar
+{
+	cursor:pointer;
+	text-decoration:underline;
+	font-family:Verdana;
+	font-size:11px;
+}
+
+span.linkar2
+{
+	cursor:pointer;
+	text-decoration:underline;
+	font-family:Verdana;
+	font-size:9px;
+}
+
+a.laranja {
+	color:#f7962e;
+	text-decoration:none;
+}
+
+a.branco {
+	color:#ffffff;
+	text-decoration:none;
+}
+
