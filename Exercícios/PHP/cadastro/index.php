@@ -3,6 +3,7 @@
   <TITLE> Curso Completo de PHP </TITLE>  
 </HEAD>
 <BODY>
+<a href="index.php?link=4"> </a>  
 <table width = "100%" border = "1" cellspacing = "0" cellpadding = "0">
 <tr>
 <td> 
@@ -20,13 +21,13 @@
 			    <td><a href="index.php?link=1"> Home </a> </td>
 			  </tr>			  			  
 			  <tr>
-			    <td>Inserir </td>
+			    <td><a href="index.php?link=2"> Inserir </a> </td>
 			  </tr>
 			  <tr>
-			    <td>Alterar </td>
+			    <td><a href="index.php?link=3"> Alterar </a> </td>
 			  </tr>
 			  <tr>
-			    <td>Excluir </td>
+			    <td> Excluir </td>
 			  </tr>
 			  <tr>
 			    <td>Consultar </td>
@@ -42,6 +43,9 @@
 				    $link = $_GET["link"];
 					
 					$pag[1] = "home.php";
+					$pag[2] = "formcliente.php";					
+					$pag[3] = "selecionaalterar.php";										
+					$pag[4] = "formeditar.php";															
 					
 					if (!empty($link))
 					{
