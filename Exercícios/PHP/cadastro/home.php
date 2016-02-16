@@ -18,7 +18,7 @@
   
 	
 	<?php
-		$sql = "select * from cliente";
+		$sql = "select * from cliente order by id_cliente";
 		$query = mysql_query($sql);
 		$bgcolor = "#4682B4";
 		
@@ -32,11 +32,11 @@
 			print "
 			<tr bgcolor = '#708090'>
 			  <td bgcolor = \"$bgcolor\"> <font color = white> $resultado[nome] </font> </td>
-			  <td bgcolor = \"$bgcolor\"> $resultado[endereco] </td>
-			  <td bgcolor = \"$bgcolor\"> $resultado[cidade] </td>
-			  <td bgcolor = \"$bgcolor\"> $resultado[bairro] </td>
-			  <td bgcolor = \"$bgcolor\"> $resultado[cep] </td>
-			  <td bgcolor = \"$bgcolor\"> $resultado[email] </td>			
+			  <td bgcolor = \"$bgcolor\"> <font color = white> $resultado[endereco] </font> </td>
+			  <td bgcolor = \"$bgcolor\"> <font color = white> $resultado[cidade] </font> </td>
+			  <td bgcolor = \"$bgcolor\"> <font color = white> $resultado[bairro] </font> </td>
+			  <td bgcolor = \"$bgcolor\"> <font color = white> $resultado[cep] </font> </td>
+			  <td bgcolor = \"$bgcolor\"> <font color = white> $resultado[email] </font> </td>			
 			  </tr>";	
 		}			
 	?>

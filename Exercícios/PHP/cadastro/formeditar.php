@@ -7,6 +7,7 @@
   $linha = mysql_fetch_array($resultado);
   
   $codigo = $linha["id_cliente"];
+  $codigo = '\''.$codigo.'\'';
   $nome = $linha["nome"];
   $nome = '\''. $nome.'\''; 
   $endereco = $linha["endereco"];
@@ -25,6 +26,7 @@
   $email = '\''.$email.'\'';             
   $sexo = $linha["sexo"];
  /* $sexo = '\''.$sexo.'\'';               */
+  $uf = $linha["uf"]; 
   
 ?>
 <HTML>
@@ -35,7 +37,7 @@
 <table width = "100%" border = "1" cellspacing = "0" cellpadding = "0">
   <tr>
     <td> 
-	  <form name = "formcliente" method = "post" action = "gravar.php">
+	  <form name = "formcliente" method = "post" action = "alterar.php">
         <table width = "50%" border = "1" cellspacing = "0" align = "center" cellpadding = "0"  bordercolor = "#000000">	  
 		  <tr align = "center">
 		    <td colspan = "6"> Edicao de Clientes</td>
@@ -43,7 +45,10 @@
 		  
 		  <tr>
 		    <td>Nome:</td>
-			<td colspan = "5"><input name = "nome" type = "text" size = "68" value = <?=$nome ?>> </td>			
+			<td colspan = "5">
+			  <input name = "nome" type = "text" size = "68" value = <?=$nome ?>> 
+			  <input name = "codigo" type = "hidden" value = <?=$codigo?>>
+			</td>			
 		  </tr>
 		  		  
 		  <tr>
@@ -64,11 +69,21 @@
 			
 		    <td width = "5%">UF:</td>
             <td width = "16%">
-			  <select name = "uf" >
-			    <option>AC</option>
-			    <option>RJ</option>				
-			    <option>MG</option>				
-			    <option>SP</option>								
+			  <select name = "uf">
+			  <?php
+				$vet_uf = array("AC", "RJ", "MG", "SP",
+				"AM", "RO", "TO");
+			 
+				foreach ($vet_uf as $vetor) 
+				{			
+					$selecionado = "";
+					
+					if ($vetor == $uf) 
+						$selecionado = "selected";
+					
+					print "<option $selecionado>$vetor</option>";
+				}			  			    
+		      ?>		
 			  </select>
                                
 			</td>												
@@ -120,9 +135,6 @@
 	</td>
   </tr>
 </table>
-
-<?print $nome?>
-
 
 </BODY>
 </HTML>
