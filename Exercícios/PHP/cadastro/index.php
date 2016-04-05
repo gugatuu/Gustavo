@@ -1,6 +1,36 @@
+<?php
+  include("validarcookie.php");
+  $usuario = $_COOKIE["nome_usuario"];
+  $senha = $_COOKIE["senha_usuario"];  
+?>
 <HTML>
 <HEAD> 
   <TITLE> Curso Completo de PHP </TITLE>  
+  
+<style type = "text/css">
+<!--
+body {color: #039;
+     background: #f6faff;
+    font: 12px arial, helvetica, sans-serif;
+	}
+a.efeito {
+	position: relative;    
+    display: block;
+	font: 12px arial, helvetica, sans-serif;
+	color: #00f;
+	padding: 4px 10px;
+	text-decoration: none;	
+ }
+ 	
+ a.efeito:hover {
+    color: #fff; 
+	background-color: #000;
+ }
+ 
+-->
+</style>  
+  
+  
 </HEAD>
 <BODY>
 <a href="index.php?link=4"> </a>  
@@ -9,7 +39,7 @@
 <td> 
 	<table width = "100%" border = "1" cellspacing = "0" cellpadding = "0">
 	<tr>
-		<td colspan = "2"> cabecalho </td>
+		<td colspan = "2"> <img src = "fd.gif"> </td>
 	</tr>
 	<tr>
 		<td width = "20%"> 
@@ -18,20 +48,28 @@
 			    <td>Menu de Opcoes </td>
 			  </tr>
 			  <tr>
-			    <td><a href="index.php?link=1"> Home </a> </td>
+			    <td><a class = "efeito" href="index.php?link=1"> Home </a> </td>
 			  </tr>			  			  
 			  <tr>
-			    <td><a href="index.php?link=2"> Inserir </a> </td>
+			    <td><a class = "efeito" href="index.php?link=2"> Inserir </a> </td>
 			  </tr>
 			  <tr>
-			    <td><a href="index.php?link=3"> Alterar </a> </td>
+			    <td><a class = "efeito" href="index.php?link=3"> Alterar </a> </td>
 			  </tr>
 			  <tr>
-			    <td> Excluir </td>
+			    <td><a class = "efeito" href="index.php?link=5"> Excluir </td>
 			  </tr>
 			  <tr>
-			    <td>Consultar </td>
-			  </tr>			  
+			    <td><a class = "efeito" href="index.php?link=7">Consultar </td>
+			  </tr>	
+				<tr>
+				   <td> <a class = "efeito" href = "logout.php"> Logout </a> </td>
+				</tr>
+              <tr>
+			     <td> usuario:  <?=$usuario?> <br>
+						 senha: <?=$senha?>				         
+				 </td>
+			  </tr>					
 			</table>
 		</td>
 		<td> 
@@ -46,6 +84,9 @@
 					$pag[2] = "formcliente.php";					
 					$pag[3] = "selecionaalterar.php";										
 					$pag[4] = "formeditar.php";															
+					$pag[5] = "selecionaexcluir.php";																				
+					$pag[6] = "formexcluir.php";																									
+					$pag[7] = "consulta.php";																														
 					
 					if (!empty($link))
 					{

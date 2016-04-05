@@ -1,3 +1,6 @@
+<?php 
+  include("validarcookie.php");
+?>
 <HTML>
 <HEAD> 
   <TITLE> Curso Completo de PHP </TITLE>  
